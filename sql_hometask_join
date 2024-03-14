@@ -1,0 +1,12 @@
+SELECT
+	[FirstName],
+	[LastName],
+	[Gender],
+	[City],
+	[CountryRegionName]
+FROM
+	Customer cust
+JOIN
+	Geography geo
+ON cust.GeographyKey = geo.GeographyKey
+WHERE [Gender]='F' AND [CountryRegionName] = 'Australia'
