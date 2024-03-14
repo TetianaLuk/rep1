@@ -10,3 +10,12 @@ JOIN
 	Geography geo
 ON cust.GeographyKey = geo.GeographyKey
 WHERE [Gender]='F' AND [CountryRegionName] = 'Australia'
+
+SELECT 
+	DISTINCT [ProductName],
+	[ListPrice],
+	[UnitsBalance]
+FROM
+	Product prod
+JOIN ProductInventory inv
+ON prod.ProductKey =  inv.ProductKey;
