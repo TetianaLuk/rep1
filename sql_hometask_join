@@ -6,10 +6,10 @@ SELECT
 	[CountryRegionName]
 FROM
 	Customer cust
-JOIN
+FULL JOIN
 	Geography geo
 ON cust.GeographyKey = geo.GeographyKey
-WHERE [Gender]='F' AND [CountryRegionName] = 'Australia'
+WHERE [Gender]='F' AND [CountryRegionName] = 'Ukraine'
 
 SELECT 
 	DISTINCT [ProductName],
@@ -17,5 +17,5 @@ SELECT
 	[UnitsBalance]
 FROM
 	Product prod
-JOIN ProductInventory inv
+FUll JOIN ProductInventory inv
 ON prod.ProductKey =  inv.ProductKey;
